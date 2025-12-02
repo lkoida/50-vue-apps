@@ -1,0 +1,505 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Counter With Undo History",
+      "difficulty": "easy",
+      "description": "A counter with increment, decrement, and reset buttons. Every change is stored in a history array allowing up to 10 undo operations.",
+      "testing": [
+        "increments and decrements correctly",
+        "undo restores previous value",
+        "reset clears history and sets counter to default"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Live Character Counter",
+      "difficulty": "easy",
+      "description": "A textarea that counts characters in real time and displays a warning when nearing a limit.",
+      "testing": [
+        "correct character count displayed",
+        "warning appears when threshold exceeded"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Unit Converter",
+      "difficulty": "easy",
+      "description": "Convert values between units such as temperature, weight, and length using computed properties.",
+      "testing": [
+        "conversion formulas are correct",
+        "output rounding formats correctly"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Real-Time Color Preview",
+      "difficulty": "easy",
+      "description": "A color input that updates a preview box and displays HEX/RGB values.",
+      "testing": [
+        "preview box updates immediately",
+        "HEX/RGB values match selected color"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Stopwatch",
+      "difficulty": "medium",
+      "description": "Start, stop, and reset a millisecond-precision stopwatch using lifecycle hooks.",
+      "testing": [
+        "timer increments correctly",
+        "reset stops and clears time"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Password Strength Checker",
+      "difficulty": "medium",
+      "description": "Checks password strength on input using pattern-based scoring rules.",
+      "testing": [
+        "correct strength score returned",
+        "UI displays appropriate strength level"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Multi-Counter Component",
+      "difficulty": "medium",
+      "description": "A parent page that displays reusable counter components, each with independent state.",
+      "testing": [
+        "counters operate independently",
+        "props and emits communicate correctly"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Toggle Switch Component",
+      "difficulty": "medium",
+      "description": "A custom animated toggle switch component that emits a boolean value.",
+      "testing": [
+        "toggling changes internal state",
+        "emits correct boolean payload"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Currency Input Formatter",
+      "difficulty": "hard",
+      "description": "An input field that formats numbers as currency (commas, decimals) while keeping raw numeric value internally.",
+      "testing": [
+        "formats value correctly",
+        "internal numeric value stays accurate"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Tabs Component",
+      "difficulty": "medium",
+      "description": "Reusable tabs component with dynamic active indicator and slot content.",
+      "testing": [
+        "changes tab on click",
+        "renders slot content correctly"
+      ]
+    },
+
+    {
+      "id": 11,
+      "title": "Login Form With Validation",
+      "difficulty": "medium",
+      "description": "A login form with custom validation rules and detailed error messages.",
+      "testing": [
+        "error messages display for invalid fields",
+        "valid form triggers submit handler"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Notes App With LocalStorage",
+      "difficulty": "medium",
+      "description": "Create, update, and delete notes; everything persists in localStorage.",
+      "testing": [
+        "notes persist after reload",
+        "delete removes correct note"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Tag Input Component",
+      "difficulty": "medium",
+      "description": "Input that converts text into tags that can be removed.",
+      "testing": [
+        "tag created on Enter",
+        "tag removed on click"
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Form Wizard",
+      "difficulty": "hard",
+      "description": "Multi-step form with next/back navigation and final summary.",
+      "testing": [
+        "cannot proceed with invalid fields",
+        "summary aggregates data correctly"
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Search With Debounce",
+      "difficulty": "medium",
+      "description": "Search field with debounced input using a custom composable.",
+      "testing": [
+        "debounce delays invocation",
+        "filtering correct after debounce"
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Todo App With Categories",
+      "difficulty": "medium",
+      "description": "Categorized todo list with filters and storage persistence.",
+      "testing": [
+        "category filtering works",
+        "tasks persist on reload"
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Shopping List With Auto-Save",
+      "difficulty": "medium",
+      "description": "List of items automatically saved to localStorage on change.",
+      "testing": [
+        "auto-save runs on updates",
+        "saved items reload properly"
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Dynamic Validation Form",
+      "difficulty": "hard",
+      "description": "Form validation powered by dynamic rule configuration.",
+      "testing": [
+        "rules applied dynamically",
+        "validation behaves correctly per config"
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Dropdown Component",
+      "difficulty": "medium",
+      "description": "Custom dropdown/select with keyboard accessibility.",
+      "testing": [
+        "opens on click",
+        "arrow keys change active item"
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Autosave Draft Form",
+      "difficulty": "hard",
+      "description": "Form content auto-saved every few seconds as a draft.",
+      "testing": [
+        "auto-save interval executes",
+        "draft loads when page reloads"
+      ]
+    },
+
+    {
+      "id": 21,
+      "title": "Notification System",
+      "difficulty": "hard",
+      "description": "Global toast notifications managed via Pinia.",
+      "testing": [
+        "notification added and removed correctly",
+        "auto-dismiss works"
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Theme Switcher",
+      "difficulty": "medium",
+      "description": "Light/dark mode saved in Pinia and localStorage.",
+      "testing": [
+        "Pinia state updates theme",
+        "CSS classes apply correctly"
+      ]
+    },
+    {
+      "id": 23,
+      "title": "User Preferences Store",
+      "difficulty": "medium",
+      "description": "Manage user preferences such as density, language, and layout.",
+      "testing": [
+        "store updates all fields",
+        "preferences persist"
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Router-Based Blog",
+      "difficulty": "hard",
+      "description": "Blog with dynamic post routes and 404 fallback.",
+      "testing": [
+        "correct post loads by ID",
+        "missing post triggers 404"
+      ]
+    },
+    {
+      "id": 25,
+      "title": "Auth Route Guard",
+      "difficulty": "hard",
+      "description": "Protect pages using router navigation guards.",
+      "testing": [
+        "unauthenticated users redirected",
+        "authenticated access allowed"
+      ]
+    },
+    {
+      "id": 26,
+      "title": "Breadcrumb Generator",
+      "difficulty": "medium",
+      "description": "Extract breadcrumb path from matched vue-router records.",
+      "testing": [
+        "breadcrumb items match route",
+        "links lead to correct paths"
+      ]
+    },
+    {
+      "id": 27,
+      "title": "Multi-Layout Router",
+      "difficulty": "hard",
+      "description": "Switch layouts based on route meta flags.",
+      "testing": [
+        "correct layout loads per route",
+        "switching does not break navigation"
+      ]
+    },
+    {
+      "id": 28,
+      "title": "Pinia Shopping Cart",
+      "difficulty": "hard",
+      "description": "Add/remove cart items; total calculated via getters.",
+      "testing": [
+        "actions add and remove items",
+        "getter returns accurate total"
+      ]
+    },
+    {
+      "id": 29,
+      "title": "Favorites System",
+      "difficulty": "medium",
+      "description": "Toggle favorite items and store them persistently.",
+      "testing": [
+        "favorite toggles correctly",
+        "favorites persist"
+      ]
+    },
+    {
+      "id": 30,
+      "title": "Global Loading Spinner",
+      "difficulty": "medium",
+      "description": "A global loading overlay triggered by Pinia store.",
+      "testing": [
+        "spinner toggles on async calls",
+        "hides correctly after completion"
+      ]
+    },
+
+    {
+      "id": 31,
+      "title": "useFetch Composable",
+      "difficulty": "medium",
+      "description": "Reusable composable for API calls returning data, loading, and error.",
+      "testing": [
+        "API call mocked correctly",
+        "loading/error states function"
+      ]
+    },
+    {
+      "id": 32,
+      "title": "useLocalStorage Composable",
+      "difficulty": "medium",
+      "description": "Synchronize any reactive value with localStorage.",
+      "testing": [
+        "value syncs both ways",
+        "initial load reads from storage"
+      ]
+    },
+    {
+      "id": 33,
+      "title": "useClipboard Composable",
+      "difficulty": "medium",
+      "description": "Copy text to clipboard with reactive success status.",
+      "testing": [
+        "clipboard API mocked",
+        "status updates after copy"
+      ]
+    },
+    {
+      "id": 34,
+      "title": "Online Status Composable",
+      "difficulty": "medium",
+      "description": "Returns reactive online/offline state.",
+      "testing": [
+        "online/offline events update state"
+      ]
+    },
+    {
+      "id": 35,
+      "title": "Click Outside Directive",
+      "difficulty": "hard",
+      "description": "Directive that detects clicks outside an element.",
+      "testing": [
+        "callback triggered on outside click",
+        "no trigger on inside click"
+      ]
+    },
+    {
+      "id": 36,
+      "title": "Lazy Load Image Directive",
+      "difficulty": "hard",
+      "description": "Loads images when visible using IntersectionObserver.",
+      "testing": [
+        "mock observer triggers load",
+        "no load before intersection"
+      ]
+    },
+    {
+      "id": 37,
+      "title": "Memoized Computation Demo",
+      "difficulty": "hard",
+      "description": "Expensive computed re-runs only when dependencies change.",
+      "testing": [
+        "memoization prevents unnecessary recalculation"
+      ]
+    },
+    {
+      "id": 38,
+      "title": "Clipboard History Tracker",
+      "difficulty": "hard",
+      "description": "Tracks last 10 copied items.",
+      "testing": [
+        "history updates correctly",
+        "excess items removed"
+      ]
+    },
+    {
+      "id": 39,
+      "title": "useResizeObserver Hook",
+      "difficulty": "hard",
+      "description": "Returns reactive element dimensions.",
+      "testing": [
+        "mock resize observer",
+        "dimensions update when resized"
+      ]
+    },
+    {
+      "id": 40,
+      "title": "Breakpoint Detector",
+      "difficulty": "medium",
+      "description": "Reactive object representing device size category.",
+      "testing": [
+        "resize events update breakpoint"
+      ]
+    },
+
+    {
+      "id": 41,
+      "title": "Animated Counter",
+      "difficulty": "medium",
+      "description": "Counter animates from old to new values smoothly.",
+      "testing": [
+        "animation steps computed correctly"
+      ]
+    },
+    {
+      "id": 42,
+      "title": "Modal With Transition",
+      "difficulty": "medium",
+      "description": "Modal appears with fade/scale transition.",
+      "testing": [
+        "transition classes applied",
+        "modal hides/shows correctly"
+      ]
+    },
+    {
+      "id": 43,
+      "title": "Animated Sortable List",
+      "difficulty": "hard",
+      "description": "Sort list items using FLIP animation.",
+      "testing": [
+        "sorting algorithm works",
+        "DOM reflects new order"
+      ]
+    },
+    {
+      "id": 44,
+      "title": "Weather Widget",
+      "difficulty": "medium",
+      "description": "Fetches and displays weather data for a city.",
+      "testing": [
+        "mock API returns correct UI output",
+        "loading/error displays"
+      ]
+    },
+    {
+      "id": 45,
+      "title": "GitHub Repo Search",
+      "difficulty": "hard",
+      "description": "Search GitHub repositories with pagination.",
+      "testing": [
+        "pagination logic correct",
+        "fetch called with correct query"
+      ]
+    },
+    {
+      "id": 46,
+      "title": "Country Autocomplete",
+      "difficulty": "hard",
+      "description": "Auto-complete component with keyboard navigation.",
+      "testing": [
+        "filtered list correct",
+        "arrow keys navigate options"
+      ]
+    },
+    {
+      "id": 47,
+      "title": "Infinite Scroll Feed",
+      "difficulty": "hard",
+      "description": "Loads additional data when the user reaches bottom of the list.",
+      "testing": [
+        "scroll triggers new fetch",
+        "append logic correct"
+      ]
+    },
+    {
+      "id": 48,
+      "title": "Virtualized List",
+      "difficulty": "very-hard",
+      "description": "Renders only visible items in a 1000-item list for performance.",
+      "testing": [
+        "only small subset rendered",
+        "visible window updates on scroll"
+      ]
+    },
+    {
+      "id": 49,
+      "title": "Lazy-Loaded Image Gallery",
+      "difficulty": "hard",
+      "description": "Grid gallery where each image is lazily loaded.",
+      "testing": [
+        "lazy directive loads image correctly",
+        "gallery layout renders properly"
+      ]
+    },
+    {
+      "id": 50,
+      "title": "WebSocket Mini Chat",
+      "difficulty": "very-hard",
+      "description": "Simple WebSocket messenger using an echo server.",
+      "testing": [
+        "mock WebSocket receives messages",
+        "sent messages appear correctly"
+      ]
+    }
+  ]
+}
