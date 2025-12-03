@@ -1,505 +1,555 @@
 {
-  "projects": [
+  "Core Reactivity & Components": [
     {
       "id": 1,
       "title": "Counter With Undo History",
       "difficulty": "easy",
-      "description": "A counter with increment, decrement, and reset buttons. Every change is stored in a history array allowing up to 10 undo operations.",
+      "description": "A simple counter with increment/decrement/reset buttons. Every state change is logged, and the user can undo up to 10 previous steps.",
       "testing": [
-        "increments and decrements correctly",
-        "undo restores previous value",
-        "reset clears history and sets counter to default"
-      ]
+        "Increment/decrement updates the value",
+        "Undo restores previous state",
+        "Reset clears history correctly"
+      ],
+      "isDone": false
     },
     {
       "id": 2,
       "title": "Live Character Counter",
       "difficulty": "easy",
-      "description": "A textarea that counts characters in real time and displays a warning when nearing a limit.",
+      "description": "A textarea that shows real-time character count with a threshold warning when approaching the limit.",
       "testing": [
-        "correct character count displayed",
-        "warning appears when threshold exceeded"
-      ]
+        "Correct character count",
+        "Warning appears after threshold",
+        "Input limits are respected"
+      ],
+      "isDone": false
     },
     {
       "id": 3,
       "title": "Unit Converter",
       "difficulty": "easy",
-      "description": "Convert values between units such as temperature, weight, and length using computed properties.",
+      "description": "Length, weight, and temperature conversion using computed properties for accuracy.",
       "testing": [
-        "conversion formulas are correct",
-        "output rounding formats correctly"
-      ]
+        "Correct computed conversions",
+        "Precision rounding works",
+        "Input changes update results"
+      ],
+      "isDone": false
     },
     {
       "id": 4,
-      "title": "Real-Time Color Preview",
+      "title": "Real-Time Color Preview Tool",
       "difficulty": "easy",
-      "description": "A color input that updates a preview box and displays HEX/RGB values.",
-      "testing": [
-        "preview box updates immediately",
-        "HEX/RGB values match selected color"
-      ]
+      "description": "Color input field that updates a preview box and shows HEX/RGB representation.",
+      "testing": ["Color preview updates instantly", "HEX and RGB formats displayed correctly"],
+      "isDone": false
     },
     {
       "id": 5,
-      "title": "Stopwatch",
+      "title": "Simple Stopwatch",
       "difficulty": "medium",
-      "description": "Start, stop, and reset a millisecond-precision stopwatch using lifecycle hooks.",
-      "testing": [
-        "timer increments correctly",
-        "reset stops and clears time"
-      ]
+      "description": "Start/stop/reset stopwatch with mm:ss.ms format using requestAnimationFrame or setInterval.",
+      "testing": ["Timer increments accurately", "Pause/resume works", "Reset clears elapsed time"],
+      "isDone": false
     },
     {
       "id": 6,
       "title": "Password Strength Checker",
       "difficulty": "medium",
-      "description": "Checks password strength on input using pattern-based scoring rules.",
+      "description": "Analyzes password strength as user types using scoring rules (length, symbols, cases).",
       "testing": [
-        "correct strength score returned",
-        "UI displays appropriate strength level"
-      ]
+        "Strength score matches rules",
+        "UI indicators update",
+        "Weak/strong labels work"
+      ],
+      "isDone": false
     },
     {
       "id": 7,
       "title": "Multi-Counter Component",
       "difficulty": "medium",
-      "description": "A parent page that displays reusable counter components, each with independent state.",
-      "testing": [
-        "counters operate independently",
-        "props and emits communicate correctly"
-      ]
+      "description": "A page that renders multiple isolated counter components.",
+      "testing": ["Counters operate independently", "Props/emits handled correctly"],
+      "isDone": false
     },
     {
       "id": 8,
-      "title": "Toggle Switch Component",
+      "title": "Custom Toggle Switch Component",
       "difficulty": "medium",
-      "description": "A custom animated toggle switch component that emits a boolean value.",
-      "testing": [
-        "toggling changes internal state",
-        "emits correct boolean payload"
-      ]
+      "description": "Fully custom animated toggle with emits and accessibility features.",
+      "testing": ["Toggle switches value", "Emits boolean state", "Keyboard controls work"],
+      "isDone": false
     },
     {
       "id": 9,
-      "title": "Currency Input Formatter",
+      "title": "Currency Input With Formatting",
       "difficulty": "hard",
-      "description": "An input field that formats numbers as currency (commas, decimals) while keeping raw numeric value internally.",
+      "description": "Input automatically formats numbers into currency (e.g. 1,200.50) while preserving underlying numeric state.",
       "testing": [
-        "formats value correctly",
-        "internal numeric value stays accurate"
-      ]
+        "Formatting occurs on input",
+        "Cursor stays in position",
+        "Underlying numeric value correct"
+      ],
+      "isDone": false
     },
     {
       "id": 10,
-      "title": "Tabs Component",
+      "title": "Tab Navigation Component",
       "difficulty": "medium",
-      "description": "Reusable tabs component with dynamic active indicator and slot content.",
+      "description": "Reusable tab component with active states and dynamic highlight bar.",
       "testing": [
-        "changes tab on click",
-        "renders slot content correctly"
-      ]
-    },
+        "Tab switching displays correct panel",
+        "Active tab class applied",
+        "Navigation emits correct tab id"
+      ],
+      "isDone": false
+    }
+  ],
 
+  "Forms, Validation & Local Storage": [
     {
       "id": 11,
-      "title": "Login Form With Validation",
+      "title": "Login Form With Custom Validation",
       "difficulty": "medium",
-      "description": "A login form with custom validation rules and detailed error messages.",
+      "description": "Simple login UI with email & password validation rules.",
       "testing": [
-        "error messages display for invalid fields",
-        "valid form triggers submit handler"
-      ]
+        "Invalid fields show errors",
+        "Valid form triggers submit",
+        "Email regex validated"
+      ],
+      "isDone": false
     },
     {
       "id": 12,
       "title": "Notes App With LocalStorage",
       "difficulty": "medium",
-      "description": "Create, update, and delete notes; everything persists in localStorage.",
+      "description": "Create/edit/delete notes stored locally.",
       "testing": [
-        "notes persist after reload",
-        "delete removes correct note"
-      ]
+        "Notes persist across refresh",
+        "Delete removes correct item",
+        "Editing updates existing note"
+      ],
+      "isDone": false
     },
     {
       "id": 13,
       "title": "Tag Input Component",
       "difficulty": "medium",
-      "description": "Input that converts text into tags that can be removed.",
-      "testing": [
-        "tag created on Enter",
-        "tag removed on click"
-      ]
+      "description": "Input that creates tags when pressing Enter.",
+      "testing": ["Tags added/removed", "Duplicates blocked", "Input clears after adding"],
+      "isDone": false
     },
     {
       "id": 14,
       "title": "Form Wizard",
       "difficulty": "hard",
-      "description": "Multi-step form with next/back navigation and final summary.",
+      "description": "Multi-step form with validation between steps.",
       "testing": [
-        "cannot proceed with invalid fields",
-        "summary aggregates data correctly"
-      ]
+        "Cannot proceed on invalid step",
+        "Step data stored correctly",
+        "Summary aggregates all steps"
+      ],
+      "isDone": false
     },
     {
       "id": 15,
-      "title": "Search With Debounce",
+      "title": "Debounced Search Bar",
       "difficulty": "medium",
-      "description": "Search field with debounced input using a custom composable.",
-      "testing": [
-        "debounce delays invocation",
-        "filtering correct after debounce"
-      ]
+      "description": "Search input with a 300ms debounce using a composable.",
+      "testing": ["Debounce prevents rapid calls", "API called after delay", "Filtering works"],
+      "isDone": false
     },
     {
       "id": 16,
       "title": "Todo App With Categories",
       "difficulty": "medium",
-      "description": "Categorized todo list with filters and storage persistence.",
+      "description": "Todos grouped into categories; filter by category.",
       "testing": [
-        "category filtering works",
-        "tasks persist on reload"
-      ]
+        "Add/edit/delete works",
+        "Category filtering correct",
+        "LocalStorage persistence"
+      ],
+      "isDone": false
     },
     {
       "id": 17,
       "title": "Shopping List With Auto-Save",
       "difficulty": "medium",
-      "description": "List of items automatically saved to localStorage on change.",
-      "testing": [
-        "auto-save runs on updates",
-        "saved items reload properly"
-      ]
+      "description": "Auto-saves changes immediately to LocalStorage.",
+      "testing": ["Auto-save triggers on change", "Correct data stored", "Refresh restores list"],
+      "isDone": false
     },
     {
       "id": 18,
-      "title": "Dynamic Validation Form",
+      "title": "Dynamic Validation Rules Form",
       "difficulty": "hard",
-      "description": "Form validation powered by dynamic rule configuration.",
+      "description": "Validation rules load dynamically from a JSON config.",
       "testing": [
-        "rules applied dynamically",
-        "validation behaves correctly per config"
-      ]
+        "Rules applied per field",
+        "Config updates validation",
+        "Errors update reactively"
+      ],
+      "isDone": false
     },
     {
       "id": 19,
-      "title": "Dropdown Component",
+      "title": "Reusable Dropdown Component",
       "difficulty": "medium",
-      "description": "Custom dropdown/select with keyboard accessibility.",
-      "testing": [
-        "opens on click",
-        "arrow keys change active item"
-      ]
+      "description": "Custom dropdown with keyboard navigation.",
+      "testing": ["Opens/closes on click", "Arrow navigation works", "Emits correct selection"],
+      "isDone": false
     },
     {
       "id": 20,
-      "title": "Autosave Draft Form",
+      "title": "Form Autosave Draft",
       "difficulty": "hard",
-      "description": "Form content auto-saved every few seconds as a draft.",
-      "testing": [
-        "auto-save interval executes",
-        "draft loads when page reloads"
-      ]
-    },
+      "description": "Autosaves form state every n seconds, restores drafts on load.",
+      "testing": ["Interval triggers save", "Draft loads on refresh", "Manual submit clears draft"],
+      "isDone": false
+    }
+  ],
 
+  "forms_and_validation": [
+    {
+      "id": 11,
+      "title": "Form With Realtime Validation",
+      "difficulty": "★☆☆",
+      "description": "A small form with name, email, and age fields. Each field validates on input and displays errors in real-time. Submit button is disabled until the form is valid.",
+      "testing": "Unit-test validation functions; component test ensuring error messages appear and disappear correctly.",
+      "isDone": false
+    },
+    {
+      "id": 12,
+      "title": "Multi-Step Wizard",
+      "difficulty": "★★☆",
+      "description": "Three-step form (personal info, address, confirmation). Data persists between steps. The user can go back without losing entered data.",
+      "testing": "Test step navigation, preserved state, and correct final output.",
+      "isDone": false
+    },
+    {
+      "id": 13,
+      "title": "Dynamic Form From JSON Schema",
+      "difficulty": "★★★",
+      "description": "Build a dynamic form generator based on a provided JSON schema (field types, labels, constraints).",
+      "testing": "Snapshot test generated forms; test dynamic validation behavior.",
+      "isDone": false
+    },
+    {
+      "id": 14,
+      "title": "Password Strength Checker",
+      "difficulty": "★☆☆",
+      "description": "A password input that shows strength levels (weak/medium/strong) based on simple rules. Visual indicator updates as the user types.",
+      "testing": "Unit-test strength function; test UI updates based on password input.",
+      "isDone": false
+    },
+    {
+      "id": 15,
+      "title": "Autosave Form Draft",
+      "difficulty": "★★☆",
+      "description": "Input form that automatically saves its content to localStorage every 1 second. Restores state on reload.",
+      "testing": "Mock localStorage; ensure autosave triggers; ensure restore works.",
+      "isDone": false
+    }
+  ],
+
+  "state_management_reactivity": [
+    {
+      "id": 16,
+      "title": "Timer / Stopwatch",
+      "difficulty": "★☆☆",
+      "description": "A simple stopwatch with start, pause, reset, and lap features. Reactive time updates using setInterval.",
+      "testing": "Mock timers using Jest fake timers; verify increments and lap list updates.",
+      "isDone": false
+    },
+    {
+      "id": 17,
+      "title": "Shopping Cart with Pinia",
+      "difficulty": "★★☆",
+      "description": "Small cart system: add, remove items, update quantities. Pinia store holds state persistently.",
+      "testing": "Test store actions and computed totals; component tests for add/remove flows.",
+      "isDone": false
+    },
+    {
+      "id": 18,
+      "title": "Like / Favorite System",
+      "difficulty": "★☆☆",
+      "description": "List of items with a like button. Liked items persist in localStorage. Counts update reactively.",
+      "testing": "Test localStorage sync, toggle behavior, and UI updates.",
+      "isDone": false
+    },
+    {
+      "id": 19,
+      "title": "Theme Switcher (Dark/Light)",
+      "difficulty": "★☆☆",
+      "description": "A theme toggle stored in localStorage. Applies CSS classes globally.",
+      "testing": "Test persistence, DOM class switching, and correct initial theme.",
+      "isDone": false
+    },
+    {
+      "id": 20,
+      "title": "Reactive Search State with Debounce",
+      "difficulty": "★★☆",
+      "description": "Reactive search input using watch + debounce. Displays filtered results in real-time.",
+      "testing": "Mock timing; verify debounce execution; test filtering logic.",
+      "isDone": false
+    }
+  ],
+
+  "ui_components_interactions": [
     {
       "id": 21,
-      "title": "Notification System",
-      "difficulty": "hard",
-      "description": "Global toast notifications managed via Pinia.",
-      "testing": [
-        "notification added and removed correctly",
-        "auto-dismiss works"
-      ]
+      "title": "Tabs Component",
+      "difficulty": "★☆☆",
+      "description": "Custom tabs component supporting any slot content. Clicking a tab renders associated slot.",
+      "testing": "Test switching tabs and correct content visibility.",
+      "isDone": false
     },
     {
       "id": 22,
-      "title": "Theme Switcher",
-      "difficulty": "medium",
-      "description": "Light/dark mode saved in Pinia and localStorage.",
-      "testing": [
-        "Pinia state updates theme",
-        "CSS classes apply correctly"
-      ]
+      "title": "Accordion / FAQ",
+      "difficulty": "★☆☆",
+      "description": "Accordion with smooth transitions. Only one section open at a time.",
+      "testing": "Test toggle behavior and open/close interactions.",
+      "isDone": false
     },
     {
       "id": 23,
-      "title": "User Preferences Store",
-      "difficulty": "medium",
-      "description": "Manage user preferences such as density, language, and layout.",
-      "testing": [
-        "store updates all fields",
-        "preferences persist"
-      ]
+      "title": "Modal Component",
+      "difficulty": "★☆☆",
+      "description": "Reusable modal with teleport and keyboard ESC close.",
+      "testing": "Test open/close events, ESC handling, and slot rendering.",
+      "isDone": false
     },
     {
       "id": 24,
-      "title": "Router-Based Blog",
-      "difficulty": "hard",
-      "description": "Blog with dynamic post routes and 404 fallback.",
-      "testing": [
-        "correct post loads by ID",
-        "missing post triggers 404"
-      ]
+      "title": "Dropdown Menu",
+      "difficulty": "★☆☆",
+      "description": "Custom dropdown that closes on outside click and supports keyboard navigation.",
+      "testing": "Simulate keyboard + click events; ensure accessibility behaviors.",
+      "isDone": false
     },
     {
       "id": 25,
-      "title": "Auth Route Guard",
-      "difficulty": "hard",
-      "description": "Protect pages using router navigation guards.",
-      "testing": [
-        "unauthenticated users redirected",
-        "authenticated access allowed"
-      ]
-    },
+      "title": "Carousel / Slider",
+      "difficulty": "★★☆",
+      "description": "A lightweight carousel with next/previous buttons and auto-slide.",
+      "testing": "Test slide transitions, auto-play timing, and boundary behavior.",
+      "isDone": false
+    }
+  ],
+
+  "routing_navigation": [
     {
       "id": 26,
-      "title": "Breadcrumb Generator",
-      "difficulty": "medium",
-      "description": "Extract breadcrumb path from matched vue-router records.",
-      "testing": [
-        "breadcrumb items match route",
-        "links lead to correct paths"
-      ]
+      "title": "Basic Vue Router Navigation",
+      "difficulty": "★☆☆",
+      "description": "Three pages + dynamic route. Header nav highlights the active route.",
+      "testing": "Test route rendering and navigation links.",
+      "isDone": false
     },
     {
       "id": 27,
-      "title": "Multi-Layout Router",
-      "difficulty": "hard",
-      "description": "Switch layouts based on route meta flags.",
-      "testing": [
-        "correct layout loads per route",
-        "switching does not break navigation"
-      ]
+      "title": "Protected Route Simulation",
+      "difficulty": "★★☆",
+      "description": "Fake login system. Certain routes require 'auth' (stored in Pinia). Redirect to login when unauthorized.",
+      "testing": "Mock auth state; test guards and redirection.",
+      "isDone": false
     },
     {
       "id": 28,
-      "title": "Pinia Shopping Cart",
-      "difficulty": "hard",
-      "description": "Add/remove cart items; total calculated via getters.",
-      "testing": [
-        "actions add and remove items",
-        "getter returns accurate total"
-      ]
+      "title": "Breadcrumb Generator",
+      "difficulty": "★★☆",
+      "description": "Breadcrumbs auto-generated from the nested route structure.",
+      "testing": "Test route meta parsing and breadcrumb updates.",
+      "isDone": false
     },
     {
       "id": 29,
-      "title": "Favorites System",
-      "difficulty": "medium",
-      "description": "Toggle favorite items and store them persistently.",
-      "testing": [
-        "favorite toggles correctly",
-        "favorites persist"
-      ]
+      "title": "Scroll Behavior Demo",
+      "difficulty": "★☆☆",
+      "description": "App showcasing smooth scroll to top on navigation and restoring scroll position.",
+      "testing": "Test scroll position handling using mocked DOM.",
+      "isDone": false
     },
     {
       "id": 30,
-      "title": "Global Loading Spinner",
-      "difficulty": "medium",
-      "description": "A global loading overlay triggered by Pinia store.",
-      "testing": [
-        "spinner toggles on async calls",
-        "hides correctly after completion"
-      ]
-    },
+      "title": "Wizard Navigation via Router Steps",
+      "difficulty": "★★☆",
+      "description": "Multi-step wizard where steps are separate routes with forward/back navigation.",
+      "testing": "Test sequence flow and data persistence.",
+      "isDone": false
+    }
+  ],
 
+  "animation_transitions": [
     {
       "id": 31,
-      "title": "useFetch Composable",
-      "difficulty": "medium",
-      "description": "Reusable composable for API calls returning data, loading, and error.",
-      "testing": [
-        "API call mocked correctly",
-        "loading/error states function"
-      ]
+      "title": "Fade In/Out Transition Demo",
+      "difficulty": "★☆☆",
+      "description": "Basic use of `<transition>` for fade in/out when toggling an element.",
+      "testing": "Test CSS class application with Vue Test Utils.",
+      "isDone": false
     },
     {
       "id": 32,
-      "title": "useLocalStorage Composable",
-      "difficulty": "medium",
-      "description": "Synchronize any reactive value with localStorage.",
-      "testing": [
-        "value syncs both ways",
-        "initial load reads from storage"
-      ]
+      "title": "List Reorder Animation",
+      "difficulty": "★★☆",
+      "description": "Animated list reorder using `<transition-group>` when sorting items.",
+      "testing": "Test DOM ordering and transition class presence.",
+      "isDone": false
     },
     {
       "id": 33,
-      "title": "useClipboard Composable",
-      "difficulty": "medium",
-      "description": "Copy text to clipboard with reactive success status.",
-      "testing": [
-        "clipboard API mocked",
-        "status updates after copy"
-      ]
+      "title": "Page Transitions with Vue Router",
+      "difficulty": "★★☆",
+      "description": "Animated route transitions with fade/slide effects.",
+      "testing": "Snapshot route transitions; test class toggles.",
+      "isDone": false
     },
     {
       "id": 34,
-      "title": "Online Status Composable",
-      "difficulty": "medium",
-      "description": "Returns reactive online/offline state.",
-      "testing": [
-        "online/offline events update state"
-      ]
+      "title": "Animated Collapsible Panel",
+      "difficulty": "★★☆",
+      "description": "Height auto-transition panel for expanding/collapsing content.",
+      "testing": "Test dynamic height calculation and open/close behaviors.",
+      "isDone": false
     },
     {
       "id": 35,
-      "title": "Click Outside Directive",
-      "difficulty": "hard",
-      "description": "Directive that detects clicks outside an element.",
-      "testing": [
-        "callback triggered on outside click",
-        "no trigger on inside click"
-      ]
-    },
+      "title": "Micro-Interaction Hover Animations",
+      "difficulty": "★☆☆",
+      "description": "Buttons with hover animations using Vue-controlled state classes.",
+      "testing": "Ensure class toggles occur on mouse events.",
+      "isDone": false
+    }
+  ],
+
+  "api_data_handling": [
     {
       "id": 36,
-      "title": "Lazy Load Image Directive",
-      "difficulty": "hard",
-      "description": "Loads images when visible using IntersectionObserver.",
-      "testing": [
-        "mock observer triggers load",
-        "no load before intersection"
-      ]
+      "title": "Fake REST API Fetcher",
+      "difficulty": "★☆☆",
+      "description": "Fetch posts from JSONPlaceholder and list them. Show loading/error states.",
+      "testing": "Mock fetch; test loading and error branches.",
+      "isDone": false
     },
     {
       "id": 37,
-      "title": "Memoized Computation Demo",
-      "difficulty": "hard",
-      "description": "Expensive computed re-runs only when dependencies change.",
-      "testing": [
-        "memoization prevents unnecessary recalculation"
-      ]
+      "title": "Paginated Table",
+      "difficulty": "★★☆",
+      "description": "Table with server-side pagination simulation using mock API endpoints.",
+      "testing": "Mock pagination; test data switching and boundary pages.",
+      "isDone": false
     },
     {
       "id": 38,
-      "title": "Clipboard History Tracker",
-      "difficulty": "hard",
-      "description": "Tracks last 10 copied items.",
-      "testing": [
-        "history updates correctly",
-        "excess items removed"
-      ]
+      "title": "Search Autocomplete",
+      "difficulty": "★★☆",
+      "description": "Typeahead search with debounced API requests.",
+      "testing": "Mock API and debounce; verify correct suggestion list.",
+      "isDone": false
     },
     {
       "id": 39,
-      "title": "useResizeObserver Hook",
-      "difficulty": "hard",
-      "description": "Returns reactive element dimensions.",
-      "testing": [
-        "mock resize observer",
-        "dimensions update when resized"
-      ]
+      "title": "CRUD Dashboard",
+      "difficulty": "★★★",
+      "description": "Create, update, delete items in a small dashboard using a fake backend.",
+      "testing": "Test API calls, optimistic UI updates, and error recovery.",
+      "isDone": false
     },
     {
       "id": 40,
-      "title": "Breakpoint Detector",
-      "difficulty": "medium",
-      "description": "Reactive object representing device size category.",
-      "testing": [
-        "resize events update breakpoint"
-      ]
-    },
+      "title": "File Upload UI",
+      "difficulty": "★★☆",
+      "description": "Drag-and-drop file upload component with preview. Use mock endpoint.",
+      "testing": "Test drag events, preview logic, and upload process.",
+      "isDone": false
+    }
+  ],
 
+  "advanced_vue_features": [
     {
       "id": 41,
-      "title": "Animated Counter",
-      "difficulty": "medium",
-      "description": "Counter animates from old to new values smoothly.",
-      "testing": [
-        "animation steps computed correctly"
-      ]
+      "title": "Custom Directive: Click Outside",
+      "difficulty": "★☆☆",
+      "description": "Reusable directive that detects clicks outside an element.",
+      "testing": "Simulate document clicks; test trigger behavior.",
+      "isDone": false
     },
     {
       "id": 42,
-      "title": "Modal With Transition",
-      "difficulty": "medium",
-      "description": "Modal appears with fade/scale transition.",
-      "testing": [
-        "transition classes applied",
-        "modal hides/shows correctly"
-      ]
+      "title": "Custom Directive: Auto-Focus",
+      "difficulty": "★☆☆",
+      "description": "Directive that automatically focuses an input when mounted.",
+      "testing": "Mock focus; verify directive behavior.",
+      "isDone": false
     },
     {
       "id": 43,
-      "title": "Animated Sortable List",
-      "difficulty": "hard",
-      "description": "Sort list items using FLIP animation.",
-      "testing": [
-        "sorting algorithm works",
-        "DOM reflects new order"
-      ]
+      "title": "Composable: UseLocalStorage",
+      "difficulty": "★★☆",
+      "description": "Make a reusable composable that syncs ref values to localStorage seamlessly.",
+      "testing": "Test sync, watch behavior, and default fallback.",
+      "isDone": false
     },
     {
       "id": 44,
-      "title": "Weather Widget",
-      "difficulty": "medium",
-      "description": "Fetches and displays weather data for a city.",
-      "testing": [
-        "mock API returns correct UI output",
-        "loading/error displays"
-      ]
+      "title": "Global Event Bus (Emitter)",
+      "difficulty": "★★☆",
+      "description": "Event bus implemented using tiny emitter library or custom code.",
+      "testing": "Test subscription, unsubscription, and event propagation.",
+      "isDone": false
     },
     {
       "id": 45,
-      "title": "GitHub Repo Search",
-      "difficulty": "hard",
-      "description": "Search GitHub repositories with pagination.",
-      "testing": [
-        "pagination logic correct",
-        "fetch called with correct query"
-      ]
-    },
+      "title": "Render Function Component",
+      "difficulty": "★★★",
+      "description": "Create a small component using render() instead of templates.",
+      "testing": "Snapshot test render output; test prop changes.",
+      "isDone": false
+    }
+  ],
+
+  "storage_offline": [
     {
       "id": 46,
-      "title": "Country Autocomplete",
-      "difficulty": "hard",
-      "description": "Auto-complete component with keyboard navigation.",
-      "testing": [
-        "filtered list correct",
-        "arrow keys navigate options"
-      ]
+      "title": "LocalStorage To-Do App",
+      "difficulty": "★☆☆",
+      "description": "A tiny to-do list persisted fully in localStorage.",
+      "testing": "Mock localStorage; test CRUD operations.",
+      "isDone": false
     },
     {
       "id": 47,
-      "title": "Infinite Scroll Feed",
-      "difficulty": "hard",
-      "description": "Loads additional data when the user reaches bottom of the list.",
-      "testing": [
-        "scroll triggers new fetch",
-        "append logic correct"
-      ]
+      "title": "IndexedDB Notes App",
+      "difficulty": "★★★",
+      "description": "Mini notes app storing data in IndexedDB using idb library.",
+      "testing": "Mock IndexedDB; test read/write transactions.",
+      "isDone": false
     },
     {
       "id": 48,
-      "title": "Virtualized List",
-      "difficulty": "very-hard",
-      "description": "Renders only visible items in a 1000-item list for performance.",
-      "testing": [
-        "only small subset rendered",
-        "visible window updates on scroll"
-      ]
+      "title": "Offline Status Indicator",
+      "difficulty": "★☆☆",
+      "description": "Detect online/offline via browser events and show a warning banner.",
+      "testing": "Mock online/offline events; test banner behavior.",
+      "isDone": false
     },
     {
       "id": 49,
-      "title": "Lazy-Loaded Image Gallery",
-      "difficulty": "hard",
-      "description": "Grid gallery where each image is lazily loaded.",
-      "testing": [
-        "lazy directive loads image correctly",
-        "gallery layout renders properly"
-      ]
+      "title": "Sync Queue for API",
+      "difficulty": "★★★",
+      "description": "Queue API calls while offline and sync them when connection restores.",
+      "testing": "Test queued operations and replay behavior.",
+      "isDone": false
     },
     {
       "id": 50,
-      "title": "WebSocket Mini Chat",
-      "difficulty": "very-hard",
-      "description": "Simple WebSocket messenger using an echo server.",
-      "testing": [
-        "mock WebSocket receives messages",
-        "sent messages appear correctly"
-      ]
+      "title": "Settings Manager",
+      "difficulty": "★☆☆",
+      "description": "User settings (font size, theme, language) persisted locally.",
+      "testing": "Test persistence and reactive updates.",
+      "isDone": false
     }
   ]
 }

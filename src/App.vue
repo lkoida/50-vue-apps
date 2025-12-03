@@ -1,51 +1,48 @@
-<script setup lang="ts">
-import { onMounted, ref } from 'vue'
-import MyDetails from '@/components/MyDetails.vue'
-import { projects } from './projects'
+<script setup>
+import { onMounted, ref, toValue } from 'vue'
+import MySection from '@/components/MySection.vue'
+import projects from '@/projects.json'
 
-export type ProjectType = {
-  id: number
-  title: string
-  difficulty: string
-  description: string
-  testing: Array<string>
-  isDone?: boolean
-}
-
-const pr = ref<Array<ProjectType>>()
-const complexityMap = {
-  easy: 0,
-  medium: 1,
-  hard: 2,
-  'very-hard': 3,
-}
-
-function compare(a: ProjectType, b: ProjectType) {
-  return complexityMap[a.difficulty] - complexityMap[b.difficulty]
-}
+const pr = ref()
 
 onMounted(() => {
   if (!localStorage.getItem('pr')) {
     localStorage.setItem('pr', JSON.stringify(projects))
-    pr.value = projects.toSorted(compare)
+    pr.value = projects
   } else {
-    pr.value = JSON.parse(localStorage.getItem('pr')).toSorted(compare)
+    pr.value = JSON.parse(localStorage.getItem('pr'))
   }
 })
+
+function flushStore() {
+  if (localStorage.getItem('pr')) {
+    localStorage.removeItem('pr')
+    window.location.reload()
+  }
+}
+
+
+function setStatus(data){
+  console.log(data)
+  const projectIndex =  pr.value[data.section].findIndex(project => project.id === data.projectId)
+  console.log(projectIndex)
+  pr.value[data.section][projectIndex]['isDone'] = true;
+
+  localStorage.setItem('pr', JSON.stringify(toValue(pr)))
+}
 </script>
 
 <template>
   <main>
     <h1>50 tiny projects on vue js</h1>
-    <MyDetails
-      v-for="project in pr"
+    <button class="remove" @click="flushStore">Flush store</button>
+    <MySection
+      v-for="(project, name) of pr"
       :key="project.id"
-      :id="project.id"
-      name="50-tiny-projects"
-      :title="project.title"
-      :difficulty="project.difficulty"
-      :description="project.description"
-      :testing="project.testing"
+      :section="name"
+      :data="project"
+      name="name"
+      @set:checked="setStatus"
     />
   </main>
 </template>
