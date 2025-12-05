@@ -215,7 +215,7 @@
       "title": "Form With Realtime Validation",
       "difficulty": "★☆☆",
       "description": "A small form with name, email, and age fields. Each field validates on input and displays errors in real-time. Submit button is disabled until the form is valid.",
-      "testing": "Unit-test validation functions; component test ensuring error messages appear and disappear correctly.",
+      "testing": ["Unit-test validation functions; component test ensuring error messages appear and disappear correctly."],
       "isDone": false
     },
     {
@@ -223,7 +223,7 @@
       "title": "Multi-Step Wizard",
       "difficulty": "★★☆",
       "description": "Three-step form (personal info, address, confirmation). Data persists between steps. The user can go back without losing entered data.",
-      "testing": "Test step navigation, preserved state, and correct final output.",
+      "testing": ["Test step navigation, preserved state, and correct final output."],
       "isDone": false
     },
     {
@@ -231,7 +231,7 @@
       "title": "Dynamic Form From JSON Schema",
       "difficulty": "★★★",
       "description": "Build a dynamic form generator based on a provided JSON schema (field types, labels, constraints).",
-      "testing": "Snapshot test generated forms; test dynamic validation behavior.",
+      "testing": ["Snapshot test generated forms; test dynamic validation behavior."],
       "isDone": false
     },
     {
@@ -239,7 +239,7 @@
       "title": "Password Strength Checker",
       "difficulty": "★☆☆",
       "description": "A password input that shows strength levels (weak/medium/strong) based on simple rules. Visual indicator updates as the user types.",
-      "testing": "Unit-test strength function; test UI updates based on password input.",
+      "testing": ["Unit-test strength function; test UI updates based on password input."],
       "isDone": false
     },
     {
@@ -247,7 +247,7 @@
       "title": "Autosave Form Draft",
       "difficulty": "★★☆",
       "description": "Input form that automatically saves its content to localStorage every 1 second. Restores state on reload.",
-      "testing": "Mock localStorage; ensure autosave triggers; ensure restore works.",
+      "testing": ["Mock localStorage; ensure autosave triggers; ensure restore works."],
       "isDone": false
     }
   ],
@@ -258,7 +258,7 @@
       "title": "Timer / Stopwatch",
       "difficulty": "★☆☆",
       "description": "A simple stopwatch with start, pause, reset, and lap features. Reactive time updates using setInterval.",
-      "testing": "Mock timers using Jest fake timers; verify increments and lap list updates.",
+      "testing": ["Mock timers using Jest fake timers; verify increments and lap list updates."],
       "isDone": false
     },
     {
@@ -266,7 +266,7 @@
       "title": "Shopping Cart with Pinia",
       "difficulty": "★★☆",
       "description": "Small cart system: add, remove items, update quantities. Pinia store holds state persistently.",
-      "testing": "Test store actions and computed totals; component tests for add/remove flows.",
+      "testing": ["Test store actions and computed totals; component tests for add/remove flows."],
       "isDone": false
     },
     {
@@ -274,7 +274,7 @@
       "title": "Like / Favorite System",
       "difficulty": "★☆☆",
       "description": "List of items with a like button. Liked items persist in localStorage. Counts update reactively.",
-      "testing": "Test localStorage sync, toggle behavior, and UI updates.",
+      "testing": ["Test localStorage sync, toggle behavior, and UI updates."],
       "isDone": false
     },
     {
@@ -282,7 +282,7 @@
       "title": "Theme Switcher (Dark/Light)",
       "difficulty": "★☆☆",
       "description": "A theme toggle stored in localStorage. Applies CSS classes globally.",
-      "testing": "Test persistence, DOM class switching, and correct initial theme.",
+      "testing": ["Test persistence, DOM class switching, and correct initial theme."],
       "isDone": false
     },
     {
@@ -290,7 +290,7 @@
       "title": "Reactive Search State with Debounce",
       "difficulty": "★★☆",
       "description": "Reactive search input using watch + debounce. Displays filtered results in real-time.",
-      "testing": "Mock timing; verify debounce execution; test filtering logic.",
+      "testing": ["Mock timing; verify debounce execution; test filtering logic."],
       "isDone": false
     }
   ],
@@ -301,7 +301,7 @@
       "title": "Tabs Component",
       "difficulty": "★☆☆",
       "description": "Custom tabs component supporting any slot content. Clicking a tab renders associated slot.",
-      "testing": "Test switching tabs and correct content visibility.",
+      "testing": ["Test switching tabs and correct content visibility."],
       "isDone": false
     },
     {
@@ -309,7 +309,7 @@
       "title": "Accordion / FAQ",
       "difficulty": "★☆☆",
       "description": "Accordion with smooth transitions. Only one section open at a time.",
-      "testing": "Test toggle behavior and open/close interactions.",
+      "testing": ["Test toggle behavior and open/close interactions."],
       "isDone": false
     },
     {
@@ -317,7 +317,7 @@
       "title": "Modal Component",
       "difficulty": "★☆☆",
       "description": "Reusable modal with teleport and keyboard ESC close.",
-      "testing": "Test open/close events, ESC handling, and slot rendering.",
+      "testing": ["Test open/close events, ESC handling, and slot rendering."],
       "isDone": false
     },
     {
@@ -325,7 +325,7 @@
       "title": "Dropdown Menu",
       "difficulty": "★☆☆",
       "description": "Custom dropdown that closes on outside click and supports keyboard navigation.",
-      "testing": "Simulate keyboard + click events; ensure accessibility behaviors.",
+      "testing": ["Simulate keyboard + click events; ensure accessibility behaviors."],
       "isDone": false
     },
     {
@@ -333,7 +333,7 @@
       "title": "Carousel / Slider",
       "difficulty": "★★☆",
       "description": "A lightweight carousel with next/previous buttons and auto-slide.",
-      "testing": "Test slide transitions, auto-play timing, and boundary behavior.",
+      "testing": ["Test slide transitions, auto-play timing, and boundary behavior."],
       "isDone": false
     }
   ],
@@ -344,7 +344,7 @@
       "title": "Basic Vue Router Navigation",
       "difficulty": "★☆☆",
       "description": "Three pages + dynamic route. Header nav highlights the active route.",
-      "testing": "Test route rendering and navigation links.",
+      "testing": ["Test route rendering and navigation links."],
       "isDone": false
     },
     {
@@ -352,7 +352,7 @@
       "title": "Protected Route Simulation",
       "difficulty": "★★☆",
       "description": "Fake login system. Certain routes require 'auth' (stored in Pinia). Redirect to login when unauthorized.",
-      "testing": "Mock auth state; test guards and redirection.",
+      "testing": ["Mock auth state; test guards and redirection."],
       "isDone": false
     },
     {
@@ -360,7 +360,7 @@
       "title": "Breadcrumb Generator",
       "difficulty": "★★☆",
       "description": "Breadcrumbs auto-generated from the nested route structure.",
-      "testing": "Test route meta parsing and breadcrumb updates.",
+      "testing": ["Test route meta parsing and breadcrumb updates."],
       "isDone": false
     },
     {
@@ -368,7 +368,7 @@
       "title": "Scroll Behavior Demo",
       "difficulty": "★☆☆",
       "description": "App showcasing smooth scroll to top on navigation and restoring scroll position.",
-      "testing": "Test scroll position handling using mocked DOM.",
+      "testing": ["Test scroll position handling using mocked DOM."],
       "isDone": false
     },
     {
@@ -376,7 +376,7 @@
       "title": "Wizard Navigation via Router Steps",
       "difficulty": "★★☆",
       "description": "Multi-step wizard where steps are separate routes with forward/back navigation.",
-      "testing": "Test sequence flow and data persistence.",
+      "testing": ["Test sequence flow and data persistence."],
       "isDone": false
     }
   ],
@@ -387,7 +387,7 @@
       "title": "Fade In/Out Transition Demo",
       "difficulty": "★☆☆",
       "description": "Basic use of `<transition>` for fade in/out when toggling an element.",
-      "testing": "Test CSS class application with Vue Test Utils.",
+      "testing": ["Test CSS class application with Vue Test Utils."],
       "isDone": false
     },
     {
@@ -395,7 +395,7 @@
       "title": "List Reorder Animation",
       "difficulty": "★★☆",
       "description": "Animated list reorder using `<transition-group>` when sorting items.",
-      "testing": "Test DOM ordering and transition class presence.",
+      "testing": ["Test DOM ordering and transition class presence."],
       "isDone": false
     },
     {
@@ -403,7 +403,7 @@
       "title": "Page Transitions with Vue Router",
       "difficulty": "★★☆",
       "description": "Animated route transitions with fade/slide effects.",
-      "testing": "Snapshot route transitions; test class toggles.",
+      "testing": ["Snapshot route transitions; test class toggles."],
       "isDone": false
     },
     {
@@ -411,7 +411,7 @@
       "title": "Animated Collapsible Panel",
       "difficulty": "★★☆",
       "description": "Height auto-transition panel for expanding/collapsing content.",
-      "testing": "Test dynamic height calculation and open/close behaviors.",
+      "testing": ["Test dynamic height calculation and open/close behaviors."],
       "isDone": false
     },
     {
@@ -419,7 +419,7 @@
       "title": "Micro-Interaction Hover Animations",
       "difficulty": "★☆☆",
       "description": "Buttons with hover animations using Vue-controlled state classes.",
-      "testing": "Ensure class toggles occur on mouse events.",
+      "testing": ["Ensure class toggles occur on mouse events."],
       "isDone": false
     }
   ],
@@ -430,7 +430,7 @@
       "title": "Fake REST API Fetcher",
       "difficulty": "★☆☆",
       "description": "Fetch posts from JSONPlaceholder and list them. Show loading/error states.",
-      "testing": "Mock fetch; test loading and error branches.",
+      "testing": ["Mock fetch; test loading and error branches."],
       "isDone": false
     },
     {
@@ -438,7 +438,7 @@
       "title": "Paginated Table",
       "difficulty": "★★☆",
       "description": "Table with server-side pagination simulation using mock API endpoints.",
-      "testing": "Mock pagination; test data switching and boundary pages.",
+      "testing": ["Mock pagination; test data switching and boundary pages."],
       "isDone": false
     },
     {
@@ -446,7 +446,7 @@
       "title": "Search Autocomplete",
       "difficulty": "★★☆",
       "description": "Typeahead search with debounced API requests.",
-      "testing": "Mock API and debounce; verify correct suggestion list.",
+      "testing": ["Mock API and debounce; verify correct suggestion list."],
       "isDone": false
     },
     {
@@ -454,7 +454,7 @@
       "title": "CRUD Dashboard",
       "difficulty": "★★★",
       "description": "Create, update, delete items in a small dashboard using a fake backend.",
-      "testing": "Test API calls, optimistic UI updates, and error recovery.",
+      "testing": ["Test API calls, optimistic UI updates, and error recovery."],
       "isDone": false
     },
     {
@@ -462,7 +462,7 @@
       "title": "File Upload UI",
       "difficulty": "★★☆",
       "description": "Drag-and-drop file upload component with preview. Use mock endpoint.",
-      "testing": "Test drag events, preview logic, and upload process.",
+      "testing": ["Test drag events, preview logic, and upload process."],
       "isDone": false
     }
   ],
@@ -473,7 +473,7 @@
       "title": "Custom Directive: Click Outside",
       "difficulty": "★☆☆",
       "description": "Reusable directive that detects clicks outside an element.",
-      "testing": "Simulate document clicks; test trigger behavior.",
+      "testing": ["Simulate document clicks; test trigger behavior."],
       "isDone": false
     },
     {
@@ -481,7 +481,7 @@
       "title": "Custom Directive: Auto-Focus",
       "difficulty": "★☆☆",
       "description": "Directive that automatically focuses an input when mounted.",
-      "testing": "Mock focus; verify directive behavior.",
+      "testing": ["Mock focus; verify directive behavior."],
       "isDone": false
     },
     {
@@ -489,7 +489,7 @@
       "title": "Composable: UseLocalStorage",
       "difficulty": "★★☆",
       "description": "Make a reusable composable that syncs ref values to localStorage seamlessly.",
-      "testing": "Test sync, watch behavior, and default fallback.",
+      "testing": ["Test sync, watch behavior, and default fallback."],
       "isDone": false
     },
     {
@@ -497,7 +497,7 @@
       "title": "Global Event Bus (Emitter)",
       "difficulty": "★★☆",
       "description": "Event bus implemented using tiny emitter library or custom code.",
-      "testing": "Test subscription, unsubscription, and event propagation.",
+      "testing": ["Test subscription, unsubscription, and event propagation."],
       "isDone": false
     },
     {
@@ -505,7 +505,7 @@
       "title": "Render Function Component",
       "difficulty": "★★★",
       "description": "Create a small component using render() instead of templates.",
-      "testing": "Snapshot test render output; test prop changes.",
+      "testing": ["Snapshot test render output; test prop changes."],
       "isDone": false
     }
   ],
@@ -516,7 +516,7 @@
       "title": "LocalStorage To-Do App",
       "difficulty": "★☆☆",
       "description": "A tiny to-do list persisted fully in localStorage.",
-      "testing": "Mock localStorage; test CRUD operations.",
+      "testing": ["Mock localStorage; test CRUD operations."],
       "isDone": false
     },
     {
@@ -524,7 +524,7 @@
       "title": "IndexedDB Notes App",
       "difficulty": "★★★",
       "description": "Mini notes app storing data in IndexedDB using idb library.",
-      "testing": "Mock IndexedDB; test read/write transactions.",
+      "testing": ["Mock IndexedDB; test read/write transactions."],
       "isDone": false
     },
     {
@@ -532,7 +532,7 @@
       "title": "Offline Status Indicator",
       "difficulty": "★☆☆",
       "description": "Detect online/offline via browser events and show a warning banner.",
-      "testing": "Mock online/offline events; test banner behavior.",
+      "testing": ["Mock online/offline events; test banner behavior."],
       "isDone": false
     },
     {
@@ -540,7 +540,7 @@
       "title": "Sync Queue for API",
       "difficulty": "★★★",
       "description": "Queue API calls while offline and sync them when connection restores.",
-      "testing": "Test queued operations and replay behavior.",
+      "testing": ["Test queued operations and replay behavior."],
       "isDone": false
     },
     {
@@ -548,7 +548,7 @@
       "title": "Settings Manager",
       "difficulty": "★☆☆",
       "description": "User settings (font size, theme, language) persisted locally.",
-      "testing": "Test persistence and reactive updates.",
+      "testing": ["Test persistence and reactive updates."],
       "isDone": false
     }
   ]

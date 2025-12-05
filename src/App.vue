@@ -23,9 +23,8 @@ function flushStore() {
 
 
 function setStatus(data){
-  console.log(data)
   const projectIndex =  pr.value[data.section].findIndex(project => project.id === data.projectId)
-  console.log(projectIndex)
+
   pr.value[data.section][projectIndex]['isDone'] = true;
 
   localStorage.setItem('pr', JSON.stringify(toValue(pr)))
