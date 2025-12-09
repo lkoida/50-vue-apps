@@ -1,0 +1,39 @@
+:root {
+  --bg-dark: #303348FF;
+  --bg-light: #ffffff;
+
+  --accent-dark: #462f88;
+  --accent-light: #5f63ec;
+
+  --text-dark: #000000;
+  --text-light: #dadada;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @media (prefers-color-scheme: dark) {
+    background: var(--bg-dark);
+    color: var(--text-light);
+  }
+}
+
+button {
+  width: 100%;
+  height: 32px;
+  border-radius: 4px;
+  border: none;
+  background: var(--accent-light);
+  color: var(--text-light);
+
+  &:focus {
+    border: 1px solid color-mix(var(--accent-dark, white));
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background: var(--accent-dark);
+    color: var(--text-light);
+  }
+}
