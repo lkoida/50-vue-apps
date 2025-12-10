@@ -1,25 +1,32 @@
-<script setup>
+<script setup lang="ts">
 import { onMounted, ref, toValue } from 'vue'
 import MySection from '@/components/MySection.vue'
-import projects from '@/projects.json'
+import { sb } from '@/lib/supabaseClient.js'
 
+/**
+ *
+ * @type {Ref<Array<{id: number, title: string, projects: Array<{
+ *   id: number,
+ *   title: string,
+ *   projectUrl: string,
+ *   testing: Array<string>,
+ *   description: string,
+ *   level: number,
+ *   sectionId: number
+ *
+ * }>}> | null>}
+ */
 const pr = ref()
 
-onMounted(() => {
-  if (!localStorage.getItem('pr')) {
-    localStorage.setItem('pr', JSON.stringify(projects))
-    pr.value = projects
-  } else {
-    pr.value = JSON.parse(localStorage.getItem('pr'))
+onMounted(async () => {
+  const result = await sb
+    .from('sections')
+    .select('*, projects(*)')
+    .order('level', { referencedTable: 'projects', ascending: true })
+  if (!result.error && result.status === 200) {
+    pr.value = result.data
   }
 })
-
-function flushStore() {
-  if (localStorage.getItem('pr')) {
-    localStorage.removeItem('pr')
-    window.location.reload()
-  }
-}
 
 function setStatus(data) {
   const projectIndex = pr.value[data.section].findIndex((project) => project.id === data.projectId)
@@ -38,12 +45,11 @@ function setUrl(data) {
 <template>
   <main>
     <h1>50 tiny projects on vue js</h1>
-    <button class="remove" @click="flushStore">Flush store</button>
     <MySection
-      v-for="(project, name) of pr"
-      :key="project.id"
-      :section="name"
-      :data="project"
+      v-for="section of pr"
+      :key="section.name"
+      :section="section.title"
+      :data="section.projects"
       name="name"
       @set:checked="setStatus"
       @set:url="setUrl"
