@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 
 const props = defineProps(['section', 'data'])
@@ -6,12 +6,6 @@ const emit = defineEmits(['set:checked', 'set:url'])
 
 const goldStar = '&#x2B50;'
 const emptyStar = '&#x2606;'
-const difficultyMap = {
-  easy: `${goldStar}${emptyStar.repeat(3)}`,
-  medium: `${goldStar.repeat(2)}${emptyStar.repeat(2)}`,
-  hard: `${goldStar.repeat(3)}${emptyStar.repeat(1)}`,
-  'very-hard': `${goldStar.repeat(4)}`,
-}
 
 function markDone(projectId, section) {
   emit('set:checked', { projectId, section })
@@ -30,7 +24,11 @@ function setProjectUrl(projectId, section) {
     <details class="nested" v-for="project of data" :key="project.id">
       <summary class="nested-summary">
         <span class="nested-summary-content">
-          {{ project.title }} <span class="difficulty" v-html="difficultyMap[project.difficulty]" />
+          {{ project.title }}
+          <span
+            class="difficulty"
+            v-html="goldStar.repeat(project.level).padEnd(goldStar.length * 4, emptyStar)"
+          />
           <label v-if="!project.isDone" class="is-done-mark">
             <input
               type="checkbox"
