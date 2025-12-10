@@ -21,13 +21,17 @@ function flushStore() {
   }
 }
 
+function setStatus(data) {
+  const projectIndex = pr.value[data.section].findIndex((project) => project.id === data.projectId)
 
-function setStatus(data){
-  const projectIndex =  pr.value[data.section].findIndex(project => project.id === data.projectId)
-
-  pr.value[data.section][projectIndex]['isDone'] = true;
+  pr.value[data.section][projectIndex]['isDone'] = true
 
   localStorage.setItem('pr', JSON.stringify(toValue(pr)))
+}
+
+function setUrl(data) {
+  const projectIndex = pr.value[data.section].findIndex((project) => project.id === data.projectId)
+  pr.value[data.section][projectIndex]['projectURL'] = data.link
 }
 </script>
 
@@ -42,6 +46,7 @@ function setStatus(data){
       :data="project"
       name="name"
       @set:checked="setStatus"
+      @set:url="setUrl"
     />
   </main>
 </template>

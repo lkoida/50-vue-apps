@@ -10,7 +10,8 @@
         "Undo restores previous state",
         "Reset clears history correctly"
       ],
-      "isDone": false
+      "isDone": false,
+      "projectURL": "https://stackblitz.com/edit/vitejs-vite-24subb49?file=README.md"
     },
     {
       "id": 2,
@@ -22,7 +23,8 @@
         "Warning appears after threshold",
         "Input limits are respected"
       ],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 3,
@@ -34,7 +36,8 @@
         "Precision rounding works",
         "Input changes update results"
       ],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 4,
@@ -42,7 +45,8 @@
       "difficulty": "easy",
       "description": "Color input field that updates a preview box and shows HEX/RGB representation.",
       "testing": ["Color preview updates instantly", "HEX and RGB formats displayed correctly"],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 5,
@@ -50,7 +54,8 @@
       "difficulty": "medium",
       "description": "Start/stop/reset stopwatch with mm:ss.ms format using requestAnimationFrame or setInterval.",
       "testing": ["Timer increments accurately", "Pause/resume works", "Reset clears elapsed time"],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 6,
@@ -62,7 +67,8 @@
         "UI indicators update",
         "Weak/strong labels work"
       ],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 7,
@@ -70,7 +76,8 @@
       "difficulty": "medium",
       "description": "A page that renders multiple isolated counter components.",
       "testing": ["Counters operate independently", "Props/emits handled correctly"],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 8,
@@ -78,7 +85,8 @@
       "difficulty": "medium",
       "description": "Fully custom animated toggle with emits and accessibility features.",
       "testing": ["Toggle switches value", "Emits boolean state", "Keyboard controls work"],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 9,
@@ -90,7 +98,8 @@
         "Cursor stays in position",
         "Underlying numeric value correct"
       ],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 10,
@@ -102,7 +111,8 @@
         "Active tab class applied",
         "Navigation emits correct tab id"
       ],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     }
   ],
 
@@ -117,7 +127,8 @@
         "Valid form triggers submit",
         "Email regex validated"
       ],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 12,
@@ -129,7 +140,8 @@
         "Delete removes correct item",
         "Editing updates existing note"
       ],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 13,
@@ -137,7 +149,8 @@
       "difficulty": "medium",
       "description": "Input that creates tags when pressing Enter.",
       "testing": ["Tags added/removed", "Duplicates blocked", "Input clears after adding"],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 14,
@@ -149,7 +162,8 @@
         "Step data stored correctly",
         "Summary aggregates all steps"
       ],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 15,
@@ -157,7 +171,8 @@
       "difficulty": "medium",
       "description": "Search input with a 300ms debounce using a composable.",
       "testing": ["Debounce prevents rapid calls", "API called after delay", "Filtering works"],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 16,
@@ -169,7 +184,8 @@
         "Category filtering correct",
         "LocalStorage persistence"
       ],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 17,
@@ -177,7 +193,8 @@
       "difficulty": "medium",
       "description": "Auto-saves changes immediately to LocalStorage.",
       "testing": ["Auto-save triggers on change", "Correct data stored", "Refresh restores list"],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 18,
@@ -189,7 +206,8 @@
         "Config updates validation",
         "Errors update reactively"
       ],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 19,
@@ -197,7 +215,8 @@
       "difficulty": "medium",
       "description": "Custom dropdown with keyboard navigation.",
       "testing": ["Opens/closes on click", "Arrow navigation works", "Emits correct selection"],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 20,
@@ -205,7 +224,8 @@
       "difficulty": "hard",
       "description": "Autosaves form state every n seconds, restores drafts on load.",
       "testing": ["Interval triggers save", "Draft loads on refresh", "Manual submit clears draft"],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     }
   ],
 
@@ -216,7 +236,8 @@
       "difficulty": "★☆☆",
       "description": "A small form with name, email, and age fields. Each field validates on input and displays errors in real-time. Submit button is disabled until the form is valid.",
       "testing": ["Unit-test validation functions; component test ensuring error messages appear and disappear correctly."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 12,
@@ -224,7 +245,8 @@
       "difficulty": "★★☆",
       "description": "Three-step form (personal info, address, confirmation). Data persists between steps. The user can go back without losing entered data.",
       "testing": ["Test step navigation, preserved state, and correct final output."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 13,
@@ -232,7 +254,8 @@
       "difficulty": "★★★",
       "description": "Build a dynamic form generator based on a provided JSON schema (field types, labels, constraints).",
       "testing": ["Snapshot test generated forms; test dynamic validation behavior."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 14,
@@ -240,7 +263,8 @@
       "difficulty": "★☆☆",
       "description": "A password input that shows strength levels (weak/medium/strong) based on simple rules. Visual indicator updates as the user types.",
       "testing": ["Unit-test strength function; test UI updates based on password input."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 15,
@@ -248,7 +272,8 @@
       "difficulty": "★★☆",
       "description": "Input form that automatically saves its content to localStorage every 1 second. Restores state on reload.",
       "testing": ["Mock localStorage; ensure autosave triggers; ensure restore works."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     }
   ],
 
@@ -259,7 +284,8 @@
       "difficulty": "★☆☆",
       "description": "A simple stopwatch with start, pause, reset, and lap features. Reactive time updates using setInterval.",
       "testing": ["Mock timers using Jest fake timers; verify increments and lap list updates."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 17,
@@ -267,7 +293,8 @@
       "difficulty": "★★☆",
       "description": "Small cart system: add, remove items, update quantities. Pinia store holds state persistently.",
       "testing": ["Test store actions and computed totals; component tests for add/remove flows."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 18,
@@ -275,7 +302,8 @@
       "difficulty": "★☆☆",
       "description": "List of items with a like button. Liked items persist in localStorage. Counts update reactively.",
       "testing": ["Test localStorage sync, toggle behavior, and UI updates."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 19,
@@ -283,7 +311,8 @@
       "difficulty": "★☆☆",
       "description": "A theme toggle stored in localStorage. Applies CSS classes globally.",
       "testing": ["Test persistence, DOM class switching, and correct initial theme."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 20,
@@ -291,7 +320,8 @@
       "difficulty": "★★☆",
       "description": "Reactive search input using watch + debounce. Displays filtered results in real-time.",
       "testing": ["Mock timing; verify debounce execution; test filtering logic."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     }
   ],
 
@@ -302,7 +332,8 @@
       "difficulty": "★☆☆",
       "description": "Custom tabs component supporting any slot content. Clicking a tab renders associated slot.",
       "testing": ["Test switching tabs and correct content visibility."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 22,
@@ -310,7 +341,8 @@
       "difficulty": "★☆☆",
       "description": "Accordion with smooth transitions. Only one section open at a time.",
       "testing": ["Test toggle behavior and open/close interactions."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 23,
@@ -318,7 +350,8 @@
       "difficulty": "★☆☆",
       "description": "Reusable modal with teleport and keyboard ESC close.",
       "testing": ["Test open/close events, ESC handling, and slot rendering."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 24,
@@ -326,7 +359,8 @@
       "difficulty": "★☆☆",
       "description": "Custom dropdown that closes on outside click and supports keyboard navigation.",
       "testing": ["Simulate keyboard + click events; ensure accessibility behaviors."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 25,
@@ -334,7 +368,8 @@
       "difficulty": "★★☆",
       "description": "A lightweight carousel with next/previous buttons and auto-slide.",
       "testing": ["Test slide transitions, auto-play timing, and boundary behavior."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     }
   ],
 
@@ -345,7 +380,8 @@
       "difficulty": "★☆☆",
       "description": "Three pages + dynamic route. Header nav highlights the active route.",
       "testing": ["Test route rendering and navigation links."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 27,
@@ -353,7 +389,8 @@
       "difficulty": "★★☆",
       "description": "Fake login system. Certain routes require 'auth' (stored in Pinia). Redirect to login when unauthorized.",
       "testing": ["Mock auth state; test guards and redirection."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 28,
@@ -361,7 +398,8 @@
       "difficulty": "★★☆",
       "description": "Breadcrumbs auto-generated from the nested route structure.",
       "testing": ["Test route meta parsing and breadcrumb updates."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 29,
@@ -369,7 +407,8 @@
       "difficulty": "★☆☆",
       "description": "App showcasing smooth scroll to top on navigation and restoring scroll position.",
       "testing": ["Test scroll position handling using mocked DOM."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 30,
@@ -377,7 +416,8 @@
       "difficulty": "★★☆",
       "description": "Multi-step wizard where steps are separate routes with forward/back navigation.",
       "testing": ["Test sequence flow and data persistence."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     }
   ],
 
@@ -388,7 +428,8 @@
       "difficulty": "★☆☆",
       "description": "Basic use of `<transition>` for fade in/out when toggling an element.",
       "testing": ["Test CSS class application with Vue Test Utils."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 32,
@@ -396,7 +437,8 @@
       "difficulty": "★★☆",
       "description": "Animated list reorder using `<transition-group>` when sorting items.",
       "testing": ["Test DOM ordering and transition class presence."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 33,
@@ -404,7 +446,8 @@
       "difficulty": "★★☆",
       "description": "Animated route transitions with fade/slide effects.",
       "testing": ["Snapshot route transitions; test class toggles."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 34,
@@ -412,7 +455,8 @@
       "difficulty": "★★☆",
       "description": "Height auto-transition panel for expanding/collapsing content.",
       "testing": ["Test dynamic height calculation and open/close behaviors."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 35,
@@ -420,7 +464,8 @@
       "difficulty": "★☆☆",
       "description": "Buttons with hover animations using Vue-controlled state classes.",
       "testing": ["Ensure class toggles occur on mouse events."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     }
   ],
 
@@ -431,7 +476,8 @@
       "difficulty": "★☆☆",
       "description": "Fetch posts from JSONPlaceholder and list them. Show loading/error states.",
       "testing": ["Mock fetch; test loading and error branches."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 37,
@@ -439,7 +485,8 @@
       "difficulty": "★★☆",
       "description": "Table with server-side pagination simulation using mock API endpoints.",
       "testing": ["Mock pagination; test data switching and boundary pages."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 38,
@@ -447,7 +494,8 @@
       "difficulty": "★★☆",
       "description": "Typeahead search with debounced API requests.",
       "testing": ["Mock API and debounce; verify correct suggestion list."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 39,
@@ -455,7 +503,8 @@
       "difficulty": "★★★",
       "description": "Create, update, delete items in a small dashboard using a fake backend.",
       "testing": ["Test API calls, optimistic UI updates, and error recovery."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 40,
@@ -463,7 +512,8 @@
       "difficulty": "★★☆",
       "description": "Drag-and-drop file upload component with preview. Use mock endpoint.",
       "testing": ["Test drag events, preview logic, and upload process."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     }
   ],
 
@@ -474,7 +524,8 @@
       "difficulty": "★☆☆",
       "description": "Reusable directive that detects clicks outside an element.",
       "testing": ["Simulate document clicks; test trigger behavior."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 42,
@@ -482,7 +533,8 @@
       "difficulty": "★☆☆",
       "description": "Directive that automatically focuses an input when mounted.",
       "testing": ["Mock focus; verify directive behavior."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 43,
@@ -490,7 +542,8 @@
       "difficulty": "★★☆",
       "description": "Make a reusable composable that syncs ref values to localStorage seamlessly.",
       "testing": ["Test sync, watch behavior, and default fallback."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 44,
@@ -498,7 +551,8 @@
       "difficulty": "★★☆",
       "description": "Event bus implemented using tiny emitter library or custom code.",
       "testing": ["Test subscription, unsubscription, and event propagation."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 45,
@@ -506,7 +560,8 @@
       "difficulty": "★★★",
       "description": "Create a small component using render() instead of templates.",
       "testing": ["Snapshot test render output; test prop changes."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     }
   ],
 
@@ -517,7 +572,8 @@
       "difficulty": "★☆☆",
       "description": "A tiny to-do list persisted fully in localStorage.",
       "testing": ["Mock localStorage; test CRUD operations."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 47,
@@ -525,7 +581,8 @@
       "difficulty": "★★★",
       "description": "Mini notes app storing data in IndexedDB using idb library.",
       "testing": ["Mock IndexedDB; test read/write transactions."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 48,
@@ -533,7 +590,8 @@
       "difficulty": "★☆☆",
       "description": "Detect online/offline via browser events and show a warning banner.",
       "testing": ["Mock online/offline events; test banner behavior."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 49,
@@ -541,7 +599,8 @@
       "difficulty": "★★★",
       "description": "Queue API calls while offline and sync them when connection restores.",
       "testing": ["Test queued operations and replay behavior."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     },
     {
       "id": 50,
@@ -549,7 +608,8 @@
       "difficulty": "★☆☆",
       "description": "User settings (font size, theme, language) persisted locally.",
       "testing": ["Test persistence and reactive updates."],
-      "isDone": false
+      "isDone": false,
+      "projectURL": ""
     }
   ]
 }

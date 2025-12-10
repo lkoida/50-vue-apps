@@ -1,6 +1,8 @@
 <script setup>
+import { ref } from 'vue'
+
 const props = defineProps(['section', 'data'])
-const emit = defineEmits(['set:checked'])
+const emit = defineEmits(['set:checked', 'set:url'])
 
 const goldStar = '&#x2B50;'
 const emptyStar = '&#x2606;'
@@ -14,6 +16,11 @@ const difficultyMap = {
 function markDone(projectId, section) {
   emit('set:checked', { projectId, section })
 }
+
+const link = ref('')
+function setProjectUrl(projectId, section) {
+  emit('set:url', { projectId, section, link })
+}
 </script>
 
 <template>
@@ -22,18 +29,18 @@ function markDone(projectId, section) {
 
     <details class="nested" v-for="project of data" :key="project.id">
       <summary class="nested-summary">
-          <span class="nested-summary-content">
-            {{ project.title }} <span class="difficulty" v-html="difficultyMap[project.difficulty]"/>
-            <label v-if="!project.isDone" class="is-done-mark">
-          <input
-            type="checkbox"
-            name="isDone"
-            v-model="project.isDone"
-            @click="markDone(project.id, section)"
-          />
-        </label>
-        <span v-else>&#x2705;</span>
-          </span>
+        <span class="nested-summary-content">
+          {{ project.title }} <span class="difficulty" v-html="difficultyMap[project.difficulty]" />
+          <label v-if="!project.isDone" class="is-done-mark">
+            <input
+              type="checkbox"
+              name="isDone"
+              v-model="project.isDone"
+              @click="markDone(project.id, section)"
+            />
+          </label>
+          <span v-else>&#x2705;</span>
+        </span>
       </summary>
       <p>{{ project.description }}</p>
       <p class="text strong">Testing considerations</p>
@@ -42,6 +49,13 @@ function markDone(projectId, section) {
           {{ test }}
         </li>
       </ul>
+      <p>Result/Progress</p>
+      <form v-if="!project.projectURL" @submit.prevent="setProjectUrl(project.id, section)">
+        <input type="url" name="stack-blitz-url" class="result-progress" v-model="link" />
+      </form>
+      <a :href="project.projectURL" target="_blank" rel="noopener noreferrer" v-else>{{
+        project.projectURL
+      }}</a>
     </details>
   </details>
 </template>
@@ -69,6 +83,14 @@ function markDone(projectId, section) {
         & .difficulty::first-letter {
           color: gold;
         }
+      }
+    }
+
+    & .result-progress {
+      width: 100%;
+
+      &:not(:user-valid) {
+        border: 1px solid red;
       }
     }
   }

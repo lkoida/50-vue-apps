@@ -20,6 +20,13 @@ body {
   }
 }
 
+a {
+  color: color-mix(in oklch longer hue, var(--text-dark) 20%, rebeccapurple );
+  @media (prefers-color-scheme: dark) {
+    color: color-mix(in oklch longer hue, var(--text-light), rebeccapurple 20%);
+  }
+}
+
 button {
   width: 100%;
   height: 32px;
