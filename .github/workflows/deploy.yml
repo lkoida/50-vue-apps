@@ -19,8 +19,8 @@ jobs:
       - name: Build the project
         run: npm run build
         env:
-          VUE_APP_API_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
-          VITE_API_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
       - name: Deploy to gh pages
         uses: peaceiris/actions-gh-pages@v4
         with:
