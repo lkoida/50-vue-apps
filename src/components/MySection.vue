@@ -7,13 +7,13 @@ const emit = defineEmits(['set:checked', 'set:url'])
 const goldStar = '&#x2B50;'
 const emptyStar = '&#x2606;'
 
-function markDone(projectId, section) {
-  emit('set:checked', { projectId, section })
+function markDone(projectId) {
+  emit('set:checked', { projectId })
 }
 
 const link = ref('')
-function setProjectUrl(projectId, section) {
-  emit('set:url', { projectId, section, link })
+function setProjectUrl(projectId) {
+  emit('set:url', { projectId, link })
 }
 </script>
 
@@ -29,12 +29,12 @@ function setProjectUrl(projectId, section) {
             class="difficulty"
             v-html="goldStar.repeat(project.level).padEnd(goldStar.length * 4, emptyStar)"
           />
-          <label v-if="!project.isDone" class="is-done-mark">
+          <label v-if="!project.isdone" class="is-done-mark">
             <input
               type="checkbox"
               name="isDone"
-              v-model="project.isDone"
-              @click="markDone(project.id, section)"
+              v-model="project.isdone"
+              @click="markDone(project.id)"
             />
           </label>
           <span v-else>&#x2705;</span>
@@ -48,11 +48,11 @@ function setProjectUrl(projectId, section) {
         </li>
       </ul>
       <p>Result/Progress</p>
-      <form v-if="!project.projectURL" @submit.prevent="setProjectUrl(project.id, section)">
+      <form v-if="!project.projecturl" @submit.prevent="setProjectUrl(project.id)">
         <input type="url" name="stack-blitz-url" class="result-progress" v-model="link" />
       </form>
-      <a :href="project.projectURL" target="_blank" rel="noopener noreferrer" v-else>{{
-        project.projectURL
+      <a :href="project.projecturl" target="_blank" rel="noopener noreferrer" v-else>{{
+        project.projecturl
       }}</a>
     </details>
   </details>
