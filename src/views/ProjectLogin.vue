@@ -2,32 +2,26 @@
 import { onMounted, ref, toValue } from 'vue'
 import { sb } from '@/lib/supabaseClient.js'
 import { useRouter } from 'vue-router'
+import { useUsersStore } from '@/stores/usersStore.js'
 
 const email = ref('')
 const password = ref('')
 
 const router = useRouter()
 
+const usersStore = useUsersStore()
+
 onMounted(() => {
   sb.auth.onAuthStateChange((event, session) => {
-    if (session.access_token) {
-      router.push('/')
+    if (session?.access_token) {
+      router.push({ name: 'projects' })
     }
     console.log(event, session)
   })
 })
 
 async function login() {
-  const data = await sb.auth.signInWithPassword({
-    email: toValue(email),
-    password: toValue(password),
-  })
-
-  if (!data.error) {
-    await router.push('/')
-  } else {
-    console.log(data)
-  }
+  await usersStore.login({ email: toValue(email), password: toValue(password) })
 }
 </script>
 
