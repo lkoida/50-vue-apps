@@ -13,7 +13,7 @@ const usersStore = useUsersStore()
 
 onMounted(() => {
   sb.auth.onAuthStateChange((event, session) => {
-    if (session?.access_token) {
+    if (['INITIAL_SESSION', 'SIGNED_IN'].includes(event)) {
       router.push({ name: 'projects' })
     }
     console.log(event, session)

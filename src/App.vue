@@ -19,5 +19,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 45vw;
 }
 </style>

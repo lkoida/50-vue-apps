@@ -60,7 +60,7 @@ async function setUrl(data) {
     :key="section.name"
     :section="section.title"
     :data="section.projects"
-    name="name"
+    name="outer-startic-name"
     @set:checked="setStatus"
     @set:url="setUrl"
   />

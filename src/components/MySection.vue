@@ -21,7 +21,7 @@ function setProjectUrl(projectId) {
   <details class="section">
     <summary>{{ props.section }}</summary>
 
-    <details class="nested" v-for="project of data" :key="project.id">
+    <details class="nested" v-for="project of data" :key="project.id" :name="props.section">
       <summary class="nested-summary">
         <span class="nested-summary-content">
           {{ project.title }}
@@ -59,7 +59,20 @@ function setProjectUrl(projectId) {
 </template>
 
 <style scoped>
+
+details::details-content {
+  opacity: 0;
+  transition:
+    opacity 300ms,
+    content-visibility 300ms allow-discrete;
+}
+
+details[open]::details-content {
+  opacity: 1;
+}
+
 .section {
+  align-self: start;
   & summary {
     padding-block-start: 8px;
     height: 48px;

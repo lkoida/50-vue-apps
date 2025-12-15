@@ -9,10 +9,10 @@ export const useUsersStore = defineStore('users', () => {
 
 
   sb.auth.onAuthStateChange((event, session) => {
-    if (session?.access_token) {
+    if (event === 'INITIAL_SESSION' || event === 'SIGNED_IN') {
       isLoggedIn.value = true
       router.push({ name: 'projects' })
-    } else {
+    } else if(event === 'SIGNED_OUT') {
       isLoggedIn.value = false
       router.push({name: 'login'})
     }
