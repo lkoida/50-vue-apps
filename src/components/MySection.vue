@@ -40,7 +40,7 @@ function setProjectUrl(projectId) {
           <span v-else>&#x2705;</span>
         </span>
       </summary>
-      <p>{{ project.description }}</p>
+      <div v-html="project.description"/>
       <p class="text strong">Testing considerations</p>
       <ul>
         <li v-for="test in project.testing" :key="test">
@@ -59,18 +59,6 @@ function setProjectUrl(projectId) {
 </template>
 
 <style scoped>
-
-details::details-content {
-  opacity: 0;
-  transition:
-    opacity 300ms,
-    content-visibility 300ms allow-discrete;
-}
-
-details[open]::details-content {
-  opacity: 1;
-}
-
 .section {
   align-self: start;
   & summary {
