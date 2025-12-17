@@ -69,6 +69,14 @@ async function setProjectUrl(projectId) {
     }
   }
 
+  &[open]::details-content {
+    background: color-mix(in oklch shorter hue, var(--accent-dark), white 30%);
+    color: black;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    padding: 0.5em;
+    border: thin solid grey;
+  }
   & .result-progress {
     width: 100%;
 
