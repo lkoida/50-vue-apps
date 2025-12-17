@@ -9,14 +9,16 @@ const emptyStar = '&#x2606;'
 
 const { setUrl, markDone: markAsDone } = useProjectStore()
 
-const isDone = ref(project.isdone)
+const isDone = ref(Boolean(project.isdone))
 async function markDone(projectId) {
   await markAsDone(projectId)
 }
 
-const link = ref('')
+const link = ref(project.projecturl)
+const isSubmitted = ref(Boolean(project.projecturl))
 async function setProjectUrl(projectId) {
   await setUrl(projectId, toValue(link))
+  isSubmitted.value = true
 }
 </script>
 
@@ -29,13 +31,14 @@ async function setProjectUrl(projectId) {
           class="difficulty"
           v-html="goldStar.repeat(project.level).padEnd(goldStar.length * 4, emptyStar)"
         />
-        <label v-if="!isDone" class="is-done-mark">
-          <input type="checkbox" name="isDone" v-model="isDone" @click="markDone(project.id)" />
-        </label>
-        <span v-else>&#x2705;</span>
+        <span v-if="isDone">&#x2705;</span>
       </span>
     </summary>
     <div v-html="project.description" />
+    <label class="is-done-mark">
+      <span>Mark as done</span>
+      <input type="checkbox" name="isDone" v-model="isDone" @click="markDone(project.id)" />
+    </label>
     <p class="text strong">Testing considerations</p>
     <ul>
       <li v-for="test in project.testing" :key="test">
@@ -43,12 +46,10 @@ async function setProjectUrl(projectId) {
       </li>
     </ul>
     <p>Result/Progress</p>
-    <form v-if="!project.projecturl" @submit.prevent="setProjectUrl(project.id)">
+    <form v-if="!(link && isSubmitted)" @submit.prevent="setProjectUrl(project.id)">
       <input type="url" name="stack-blitz-url" class="result-progress" v-model="link" />
     </form>
-    <a :href="project.projecturl" target="_blank" rel="noopener noreferrer" v-else>{{
-      project.projecturl
-    }}</a>
+    <a v-else :href="project.projecturl" target="_blank" rel="noopener noreferrer">{{ link }}</a>
   </details>
 </template>
 
