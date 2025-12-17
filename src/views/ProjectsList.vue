@@ -1,6 +1,6 @@
 <script setup>
 import MySection from '@/components/MySection.vue'
-import { onMounted, ref, toValue } from 'vue'
+import { onMounted, ref } from 'vue'
 import { sb } from '@/lib/supabaseClient.js'
 
 /**
@@ -28,30 +28,6 @@ onMounted(async () => {
     pr.value = result.data
   }
 })
-
-async function setStatus(data) {
-  const { error } = await sb
-    .from('projects')
-    .update({ isdone: true })
-    .eq('id', data.projectId)
-    .select()
-  if (error) {
-    console.log(error)
-  }
-}
-
-async function setUrl(data) {
-  console.log(data)
-  const { error } = await sb
-    .from('projects')
-    .update({ projecturl: toValue(data.link) })
-    .eq('id', data.projectId)
-    .select()
-
-  if (error) {
-    console.log(error)
-  }
-}
 </script>
 
 <template>
@@ -61,8 +37,6 @@ async function setUrl(data) {
     :section="section.title"
     :data="section.projects"
     name="outer-startic-name"
-    @set:checked="setStatus"
-    @set:url="setUrl"
   />
 </template>
 
