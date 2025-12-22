@@ -15,6 +15,14 @@ const routes = [
       requiresAuth: true,
     },
   },
+  {
+    path: '/50-vue-apps/dashboard',
+    name:'dashboard',
+    component: () => import('../views/ProjectDashboard.vue'),
+    meta: {
+      requiresAuth: true,
+    }
+  },
   { path: '/50-vue-apps/login', name: 'login', component: ProjectLogin },
 ]
 
@@ -25,7 +33,7 @@ export const router = createRouter({
 
 router.beforeEach((to, from) => {
   const usersStore = useUsersStore();
-  if (to.meta.requiresAuth && !usersStore.isLoggedIn) {
-    return '/50-vue-apps/login'
+  if (!usersStore.isLoggedIn && to.name !== 'login' && to.meta.requiresAuth) {
+    return { name: 'login' }
   }
 })

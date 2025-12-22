@@ -16,7 +16,6 @@ export const useUsersStore = defineStore('users', () => {
       isLoggedIn.value = false
       router.push({name: 'login'})
     }
-    console.log(event, session)
   })
 
   async function login({email, password})  {

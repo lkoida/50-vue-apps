@@ -1,25 +1,11 @@
 <script setup>
-import { onMounted, ref, toValue } from 'vue'
-import { sb } from '@/lib/supabaseClient.js'
-import { useRouter } from 'vue-router'
+import { ref, toValue } from 'vue'
 import { useUsersStore } from '@/stores/usersStore.js'
 
 const email = ref('')
 const password = ref('')
 
-const router = useRouter()
-
 const usersStore = useUsersStore()
-
-onMounted(() => {
-  sb.auth.onAuthStateChange((event, session) => {
-    if (['INITIAL_SESSION', 'SIGNED_IN'].includes(event)) {
-      router.push({ name: 'projects' })
-    }
-    console.log(event, session)
-  })
-})
-
 async function login() {
   await usersStore.login({ email: toValue(email), password: toValue(password) })
 }
