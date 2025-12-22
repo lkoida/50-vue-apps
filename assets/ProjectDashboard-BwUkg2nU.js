@@ -1,0 +1,1 @@
+import{h as e,l as t,t as n}from"./index-DbjI6T_l.js";var r={};function i(e,t){return` Hello from dashboard `}var a=n(r,[[`render`,i]]),o={__name:`ProjectDashboard`,setup(n){return(n,r)=>(e(),t(a))}};export{o as default};
