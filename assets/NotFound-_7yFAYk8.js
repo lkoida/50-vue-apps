@@ -1,0 +1,1 @@
+import{_ as e,d as t,f as n,h as r,n as i,p as a,s as o,v as s}from"./index-BPJGJubK.js";var c={};function l(i,c){let l=e(`router-link`);return r(),t(o,null,[c[1]||=n(` The route not found, go to `,-1),a(l,{to:{name:`login`}},{default:s(()=>[...c[0]||=[n(`Login`,-1)]]),_:1})],64)}var u=i(c,[[`render`,l]]);export{u as default};

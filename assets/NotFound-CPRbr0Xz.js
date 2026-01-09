@@ -1,1 +1,0 @@
-import{d as e,f as t,g as n,p as r,s as i,t as a,v as o,y as s}from"./index-Df9BGRig.js";var c={};function l(a,c){let l=o(`router-link`);return n(),e(i,null,[c[1]||=t(` The route not found, go to `,-1),r(l,{to:{name:`login`}},{default:s(()=>[...c[0]||=[t(`Login`,-1)]]),_:1})],64)}var u=a(c,[[`render`,l]]);export{u as default};
