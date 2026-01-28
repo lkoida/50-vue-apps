@@ -1,1 +1,0 @@
-import{c as e,f as t,g as n,m as r,n as i,p as a,v as o,y as s}from"./index-BLA3mNsi.js";var c={};function l(i,c){let l=o(`router-link`);return n(),t(e,null,[c[1]||=a(` The route not found, go to `,-1),r(l,{to:{name:`login`}},{default:s(()=>[...c[0]||=[a(`Login`,-1)]]),_:1})],64)}var u=i(c,[[`render`,l]]);export{u as default};
