@@ -1,0 +1,1 @@
+import{a as e,d as t,f as n,h as r,l as i,m as a,n as o,u as s}from"./index-sSF6ktz1.js";var c={};function l(o,c){let l=a(`router-link`);return n(),i(e,null,[c[1]||=s(` The route not found, go to `,-1),t(l,{to:{name:`login`}},{default:r(()=>[...c[0]||=[s(`Login`,-1)]]),_:1})],64)}var u=o(c,[[`render`,l]]);export{u as default};
