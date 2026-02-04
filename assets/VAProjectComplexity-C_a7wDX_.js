@@ -1,0 +1,1 @@
+import{h as e,r as t,u as n}from"./index-DZstJCHF.js";var r=[`innerHTML`],i=`&#x2B50;`,a=`&#x2606;`,o=t({__name:`VAProjectComplexity`,props:{projectLevel:Number},setup(t){return(o,s)=>(e(),n(`span`,{class:`difficulty`,innerHTML:i.repeat(t.projectLevel).padEnd(32,a)},null,8,r))}},[[`__scopeId`,`data-v-fec35b42`]]);export{o as t};

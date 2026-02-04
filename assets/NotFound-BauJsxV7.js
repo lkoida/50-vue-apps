@@ -1,1 +1,0 @@
-import{_ as e,d as t,f as n,h as r,o as i,r as a,u as o,v as s}from"./index-Rapc1a_L.js";var c={};function l(a,c){let l=e(`router-link`);return r(),o(i,null,[c[1]||=t(` The route not found, go to `,-1),n(l,{to:{name:`login`}},{default:s(()=>[...c[0]||=[t(`Login`,-1)]]),_:1})],64)}var u=a(c,[[`render`,l]]);export{u as default};
