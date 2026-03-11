@@ -1,0 +1,1 @@
+import{t as e}from"./index-BvsKJbrp.js";var t={};function n(e,t){return` Some project name page dfgkdhfgkjshds sdfskjdhkj `}var r=e(t,[[`render`,n]]);export{r as default};

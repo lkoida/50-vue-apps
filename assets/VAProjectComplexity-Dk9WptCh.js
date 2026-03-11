@@ -1,1 +1,0 @@
-import{_ as e,d as t,i as n}from"./index-0ycUG5sY.js";var r=[`innerHTML`],i=`&#x2B50;`,a=`&#x2606;`,o=n({__name:`VAProjectComplexity`,props:{projectLevel:Number},setup(n){return(o,s)=>(e(),t(`span`,{class:`difficulty`,innerHTML:i.repeat(n.projectLevel).padEnd(32,a)},null,8,r))}},[[`__scopeId`,`data-v-fec35b42`]]);export{o as t};
