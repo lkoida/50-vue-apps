@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  Hello from dashboard
+  This is a home page or the page for the first project
 </template>
 
 <style scoped></style>
